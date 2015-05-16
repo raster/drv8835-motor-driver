@@ -1,0 +1,36 @@
+h1. Arduino library for the Pololu DRV8835 Dual Motor Driver Carrier
+
+Version: 1.0.0
+Release Date: 2015-05-16
+
+h2. Summary
+
+This is a library for the Arduino that interfaces with the "Pololu DRV8835 Dual Motor Driver Carrier":https://www.pololu.com/product/2135. It makes it simple to drive two brushed, DC motors.
+
+
+h3. Hardware
+
+The Pololu DRV8835 Dual Motor Driver Carrier can be purchased on "Pololu's website":http://www.pololu.com/catalog/product/2135.
+
+h3. Compatible Arduino boards
+
+This shield should work with all Arduino boards and clones that behave like a standard Arduino board.
+
+h2. Example program
+
+h3. Demo
+
+Open this example code sketch by selecting File->Examples->DRV8835DualDriverDemo->DRV8835DualDriverDemo.ino
+
+
+h2. Library reference
+
+- @void setM1Speed(int speed)@ := Set speed and direction for motor 1. Speed should be between -400 and 400. The motors brake at 0 speed. Positive speeds correspond to motor current flowing from M1A to M1B. Negative speeds correspond to motor current flowing from M1B to M1A.
+- @void setM2Speed(int speed)@ := Set speed and direction for motor 2. Speed should be between -400 and 400. The motors brake at 0 speed. Positive speeds correspond to motor current flowing from M2A to M2B. Negative speeds correspond to motor current flowing from M2B to M2A.
+- @void setSpeeds(int m1Speed, int m2Speed)@ := Set speed and direction for motor 1 and 2. 
+- @void flipM1(bool flip)@ := Flip the direction meaning of the speed passed to the setSpeeds function for motor 1.  The default direction corresponds to flipM1(false) having been called.
+- @void flipM2(bool flip)@ := Flip the direction meaning of the speed passed to the setSpeeds function for motor 2.  The default direction corresponds to flipM2(false) having been called.
+
+h2. Version history
+
+* 1.0.0 (2015-05-15): Original release.
